@@ -12,4 +12,20 @@ package com.spartronics4915.frc;
  * <p>It is advised to statically import this class (or one of its inner classes) wherever the
  * constants are needed, to reduce verbosity.
  */
-public final class Constants {}
+public final class Constants {
+    public static final class OIConstants {
+        public static final int kJoystickID = 0;
+
+        public static final int kJoysitckSlowModeButton = 6;
+    }
+
+    public static final class ExampleSubsystem {
+        public static final int kMotorID = 1;
+
+        public static final double kOutputMultiplier = 0.3;
+        public static final double kSlowModeMultiplier = 0.3;
+
+        public static final double kDeadzone = 0.05;
+        public static final double kResponseCurveExponent = 5.0 / 3.0;
+    }
+}
