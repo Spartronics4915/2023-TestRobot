@@ -22,6 +22,7 @@ public final class Constants {
     public static final class ExampleSubsystem {
         public static final int kMotorID = 1;
 
+        public static final boolean kMotorIsInverted = true;
         public static final double kOutputMultiplier = 0.3;
         public static final double kSlowModeMultiplier = 0.3;
 
