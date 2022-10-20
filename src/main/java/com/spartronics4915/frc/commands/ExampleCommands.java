@@ -37,6 +37,8 @@ public class ExampleCommands {
             double y = mJoystick.getY();
             y = -y; // Convention is to invert y because "down" on the joystick provides positive values
 
+            y *= kMotorIsInverted ? -1 : 1;
+
             y = applyDeadzone(y);
             y = applyResponseCurve(y);
 
@@ -61,7 +63,7 @@ public class ExampleCommands {
     }
 
     private double applyDeadzone(double x) {
-        return x > kDeadzone ? x : 0;
+        return Math.abs(x) > kDeadzone ? x : 0;
     }
 
     private double applyResponseCurve(double x) {
