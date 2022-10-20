@@ -61,7 +61,7 @@ public class ExampleCommands {
     }
 
     private double applyDeadzone(double x) {
-        return x > kDeadzone ? x : 0;
+        return Math.abs(x) > kDeadzone ? x : 0;
     }
 
     private double applyResponseCurve(double x) {
